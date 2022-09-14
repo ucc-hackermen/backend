@@ -14,6 +14,9 @@ class Advert(BaseModel):
     user: str
     description: Optional[str]
     location: Optional[str]
-    coords: Optional[object] = {}
+    coords: Optional[object] = {
+        "lng": "0.0",
+        "lat": "0.0"
+    }
     photo: Optional[str]
     status: str
