@@ -1,3 +1,4 @@
+from distutils.command.config import config
 from fastapi import FastAPI
 from typing import Optional
 from models import *
@@ -11,7 +12,7 @@ cred = credentials.Certificate("ucc-lost-and-found-firebase-adminsdk-9s9pv-d3a08
 firebase_app = firebase_admin.initialize_app(cred)
 db = firestore.client(firebase_app)
 
-app = FastAPI()
+app = FastAPI(title="UCC Lost and Found API", description="API for UCC Lost and Found", version="0.1.0")
 
 
 # Definition of routes
