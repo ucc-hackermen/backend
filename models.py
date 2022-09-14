@@ -20,3 +20,4 @@ class Advert(BaseModel):
     }
     photo: Optional[str]
     status: str
+    timestamp: int
